@@ -62,7 +62,7 @@ function game() {
     console.log("LETS PLAY");
     console.log("/////////////////////");
     
-    userMove = prompt("Write rock, paper or scissors to play");
+    userMove = prompt("Write rock, paper or scissors to play").toLowerCase;
 
     // while(check == false) {
     //     userMove = prompt("Please write only \"rock\", \"paper\" or \"scissors\" to play.");
