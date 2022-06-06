@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS first steps</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="text/javascript" src="./logic.js"></script>
+  </head>
+  <!--MAIN SECTION-->
+  <body>
+    <div class="gameBox">
+      <h1 id="titulo_principal">Rock, Paper, Scissors!</h1>
+      <p>Let's Play!</p>
+      <p>Click on one of the options:</p>
+
+      <div class="box">
+        <button class="moves" data-moves="rock">&#9994;</button>
+        <!-- rock-->
+        <button class="moves" data-moves="paper">&#128400;</button>
+        <!-- paper-->
+        <button class="moves" data-moves="scissors">&#9996;</button>
+        <!-- scissors-->
+
+        <div class="show_result">
+          <div>
+            You have
+            <span class="result" data-result></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
