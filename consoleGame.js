@@ -36,7 +36,8 @@ function getStronger (move1, move2) {
         else {index = 0}        
     }//scissors possibility
 
-    return results[index];
+    return index;
+    console.log("you are inside getStronger");
 }
 
 //Make the computer play a random move
@@ -47,30 +48,32 @@ function computerPlay() {
     min = Math.ceil(0);
     max = Math.floor(moves.length);
     random = Math.floor(Math.random() * (max - min + 1) + min);
+
+    console.log("you are inside Computerplay");
     return moves[random];
 }
 
 function playRound(playerSelection) {
     computerSelection = computerPlay();
-    winner = getStronger(playerSelection, computerSelection);
-    return results[winner];
+    outcome = getStronger(playerSelection, computerSelection);
+    return results[outcome];
+
+    console.log("you are inside playRound");
 }//end playRound
 
 function game() {
     resultsList = [];
-    check = false;
     console.log("LETS PLAY");
     console.log("/////////////////////");
     
     userMove = prompt("Write rock, paper or scissors to play").toLowerCase;
 
-    // while(check == false) {
-    //     userMove = prompt("Please write only \"rock\", \"paper\" or \"scissors\" to play.");
-    // }
+    while (userMove == null) {
+        userMove = prompt("Write rock, paper or scissors to play").toLowerCase;
+    }
 
     if (moves.includes(userMove)) {
-        check = true;
-        result = playRound(userMove);
+        result = playRound(userMove).toUpperCase;
         switch (result) {
             case "T" : console.log("You tide! :/")
             case "W" : console.log("You won! :) ") 
