@@ -45,7 +45,7 @@ function computerPlay() {
     var move = "", random = null;
 
     //Gather info for Math random
-    random = Math.floor(Math.random() * 3) + 1;
+    random = Math.floor(Math.random() * 3);
     move = moves[random];
     return move;
 }
