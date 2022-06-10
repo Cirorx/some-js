@@ -56,13 +56,16 @@ function playRound(playerSelection) {
 
     console.log("Computer has chosen " + computerSelection);
     console.log("You chosed " + playerSelection);
-
     console.log("////////////////////////////");
-    switch (outcome) {
-        case "T" : console.log("You have a tide with the computer, try again!");
-        case "W" : console.log("You have won  against the computer, good job! :)");
-        case "L" : console.log("You have lost the round, better luck next time! :D");
-    }    
+
+    if (outcome == results[0]) {
+        console.log("You have a tide with the computer, try again!")
+    } else if (outcome == results[1]) {
+        console.log("You have won  against the computer, good job! :)")
+    }
+    else {
+        console.log("You have lost the round, better luck next time! :D")
+    } 
 }//end playRound
 
 function game() {
@@ -77,9 +80,9 @@ function game() {
     playRound(userMove);
 }//end game
 
-// //let's play 5 rounds!
-// for (let i = 0; i < 5; i++) {
-//     game()
-// };
+number = prompt("How many round do you want to play?");
 
-game();
+//let's play "number" rounds!
+for (let i = 0; i < number; i++) {
+    game()
+};
