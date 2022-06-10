@@ -69,18 +69,20 @@ function playRound(playerSelection) {
 }//end playRound
 
 function game() {
+    var userMove = " ";
     resultsList = [];
     console.log("                   /////////////////////");
     console.log("                         LETS PLAY");
     console.log("                   /////////////////////");
     
     userMove = prompt("Write \"rock\", \"paper\" or \"scissors\" to play!");
+    userMove = userMove.toLowerCase();
     /*} while (userMove !== "rock" /*|| userMove != "paper" || userMove != "scissors")*/
    
     playRound(userMove);
 }//end game
 
-number = prompt("How many round do you want to play?");
+number = prompt("How many round do you want to play?");5
 
 //let's play "number" rounds!
 for (let i = 0; i < number; i++) {
